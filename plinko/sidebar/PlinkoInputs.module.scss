@@ -1,0 +1,174 @@
+.input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  &Icon {
+    position: absolute;
+    left: 10px;
+    height: auto;
+  }
+  &Container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    order: 0;
+  }
+  &Label {
+    color: var(--Starlight-100, #fff);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &Field {
+    cursor: default;
+    border: 1px solid #9b9b9b33;
+    border-radius: 8px;
+    background: #1a1e24;
+    color: #fff;
+    padding: 0 10px 0 40px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+    width: 100%;
+    height: 42px;
+    &:hover,
+    &:focus {
+      //   outline: 1px solid #ff014e;
+      outline: none;
+    }
+    &[type='number'] {
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  &Buttons {
+    position: absolute;
+    right: 5px;
+    display: flex;
+    gap: 6px;
+    order: 1;
+  }
+  &Btn {
+    min-width: 47px;
+    padding: 0 5px;
+    line-height: 32px;
+    color: var(--Starlight-100, #fff);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    text-transform: capitalize;
+
+    font-weight: 400;
+    border-radius: 4px;
+    opacity: 0.9;
+    background: var(--Starlight-15, #ffffff26);
+
+    border: 0;
+    transition: all ease 0.4s;
+    &:disabled {
+      background: var(--Starlight-15, #ffffff26);
+
+      color: var(--Starlight-25, rgba(255, 255, 255, 0.25));
+    }
+    &:not(:disabled):hover {
+      cursor: pointer;
+      background: var(--Starlight-5, rgba(255, 255, 255, 0.25));
+    }
+  }
+}
+
+.plinkoRiskSelector {
+  &Btns {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+  }
+  &Btn {
+    flex-grow: 1;
+    flex: 1;
+    padding: 7px 12px 8px 12px;
+    line-height: 32px;
+    color: var(--Starlight-100, #fff);
+    text-align: center;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 4px;
+    opacity: 0.9;
+    border: 0;
+    transition: all ease 0.4s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    background: #ffffff0f;
+
+    &:not(:disabled):hover {
+      cursor: pointer;
+      background: var(--Starlight-5, rgba(255, 255, 255, 0.25));
+    }
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+.fairnessBtn {
+  color: var(--Jackpot-Red, #ff014e);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  align-self: flex-end;
+  text-decoration: underline;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.fairnessBtnContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.maxBetNote {
+  color: var(--Starlight-50, rgba(255, 255, 255, 0.5));
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  margin: 0 0 12px;
+}
+
+.inError {
+  color: red;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.infinityBtn {
+  background: #ffffff0f;
+  border: 1px solid #9b9b9b33;
+  border-radius: 8px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 30px;
+}

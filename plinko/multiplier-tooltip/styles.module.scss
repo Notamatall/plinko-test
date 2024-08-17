@@ -1,0 +1,51 @@
+.plinkoMultiplier {
+  position: relative;
+  width: 100%;
+  cursor: help;
+}
+
+.popoverContent {
+  display: flex;
+  gap: 5px;
+  border-radius: 8px;
+  border: 1px solid var(--Starlight-15, rgba(255, 255, 255, 0.15));
+  background: #111519;
+}
+
+.inputIcon {
+  left: 15px;
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--Starlight-75, rgba(255, 255, 255, 0.75));
+  font-family: Outfit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.inputWrapper {
+  display: flex;
+  position: relative;
+  & input {
+    cursor: default;
+    border: 1px solid rgba(155, 155, 155, 0.2);
+    border-radius: 8px;
+    background: #1a1e24;
+    color: #fff;
+    padding: 0 10px 0 40px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    width: 100%;
+    height: 42px;
+  }
+}

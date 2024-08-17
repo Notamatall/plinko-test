@@ -1,0 +1,166 @@
+.plinkoActions {
+  display: flex;
+  gap: 18px;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.plinkoSwitchContainer {
+  display: flex;
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.375rem 0;
+  gap: 0.2rem;
+  overflow: hidden;
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 1.55rem;
+  @media (max-width: 1024px) {
+    order: 2;
+  }
+}
+
+.plinkoSwitchButtons {
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+  align-self: stretch;
+  width: 100%;
+  border-radius: 46px;
+  :first-child {
+    border-top-left-radius: 46px;
+    border-bottom-left-radius: 46px;
+  }
+  :nth-child(2) {
+    border-top-right-radius: 46px;
+    border-bottom-right-radius: 46px;
+  }
+}
+
+.plinkoSwitchButton,
+.plinkoSwitchButtonActive {
+  display: flex;
+  padding: 11px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--Totally-White-100, #fff);
+  text-align: center;
+  font-family: Outfit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  border: 0;
+}
+
+.plinkoSwitchButtonActive {
+  background: var(--Jackpot-Red, #ff014e);
+}
+
+.plinkoBetBtn {
+  text-align: center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: uppercase;
+  min-width: 166px;
+  padding: 0 32px;
+  text-decoration: none;
+  color: var(--starlight-100);
+  transition: all ease 0.3s;
+
+  &:not(:disabled):hover {
+    cursor: pointer;
+    color: var(--starlight-100);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 12px;
+  }
+  @media (max-width: 1024px) {
+    order: -1;
+  }
+  background: var(--jackpot-Red);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 71.5px 0 rgba(255, 1, 78, 0.25);
+  border: 1px solid var(--jackpot-Red);
+
+  &:not(:disabled):hover {
+    background: darken(#ff014e, 20%);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    border: 1px solid darken(#ff014e, 20%);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  &:disabled:active {
+    transform: scale(1);
+  }
+}
+.plinkoRowsRange {
+  flex: auto;
+  height: 6px;
+  border-radius: 3px;
+}
+.plinkoRowsRangeWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 450px) {
+    padding: 0 12px;
+  }
+  & > input {
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border-radius: 56px;
+      background: var(--Jackpot-Red, rgb(255, 1, 78));
+      border: none;
+      margin-top: calc(4px * 0.5 - 16px * 0.5);
+    }
+
+    &::-webkit-slider-runnable-track {
+      height: 4px;
+      border-radius: 2px;
+    }
+
+    &:disabled {
+      background: var(--Jackpot-Red, #ff014e);
+      opacity: 0.7;
+
+      ::-webkit-slider-thumb {
+        background: var(--Jackpot-Red, #ff014e);
+      }
+    }
+  }
+}
+
+.plinkoDices {
+  background-image: url('../../../../assets/games/plinko/dices.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: -50px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    background-size: cover;
+    bottom: 0;
+  }
+}

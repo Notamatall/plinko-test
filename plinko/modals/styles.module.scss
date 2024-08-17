@@ -1,0 +1,303 @@
+.infoModalFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  flex-grow: 1;
+  & input {
+    pointer-events: none;
+  }
+}
+
+.centeredFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.info {
+  &Container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    gap: 20px;
+    font-family: 'Golos Text';
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+  }
+  &GameTitle {
+    color: var(--Starlight-100, #fff);
+    text-align: center;
+    font-feature-settings:
+      'liga' off,
+      'clig' off;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &Header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+    align-items: center;
+    color: var(--Starlight-100, #fff);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    &Login {
+      border-radius: 6px;
+      background: var(--Starlight-10, rgba(255, 255, 255, 0.1));
+      display: flex;
+      padding: 10px 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    &Date {
+      color: var(--Starlight-50, rgba(255, 255, 255, 0.5));
+    }
+  }
+  &Body {
+    color: var(--text, var(--text, rgba(226, 241, 255, 0.75)));
+    text-align: center;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: #1a1e24;
+    border-radius: 8px;
+    border: 1px solid var(--Starlight-10, rgba(255, 255, 255, 0.1));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 100%;
+    &Header {
+      width: 100%;
+      display: flex;
+      border-bottom: 1px solid var(--Starlight-10, rgba(255, 255, 255, 0.1));
+
+      & > :nth-child(2) {
+        border-left: 1px solid var(--Starlight-10, rgba(255, 255, 255, 0.1));
+        border-right: 1px solid var(--Starlight-10, rgba(255, 255, 255, 0.1));
+      }
+
+      &Cell {
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        & > :nth-child(2) {
+          color: var(--Starlight-100, #fff);
+          font-family: Outfit;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+      }
+    }
+    &Multiplier {
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  &Footer {
+    @media (max-width: 700px) {
+      width: 100%;
+      flex-direction: column;
+    }
+    display: flex;
+    gap: 10px;
+    input {
+      cursor: pointer;
+      border-radius: 8px;
+      border: 1px solid var(--Starlight-5, rgba(255, 255, 255, 0.05));
+      background: var(--Starlight-10, rgba(255, 255, 255, 0.1));
+      display: flex;
+      padding: 11px 16px;
+      align-items: center;
+      gap: 8px;
+      align-self: stretch;
+      color: rgba(255, 255, 255, 0.7);
+      font-family: Outfit;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+.playPlinkoBtn {
+  text-align: center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: uppercase;
+  min-width: 166px;
+  padding: 0 32px;
+  text-decoration: none;
+  color: var(--starlight-100);
+  transition: all ease 0.5s;
+
+  &:not(:disabled):hover {
+    cursor: pointer;
+    color: var(--starlight-100);
+  }
+
+  background: var(--jackpot-Red);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 71.5px 0 rgba(255, 1, 78, 0.25);
+  border: 1px solid var(--jackpot-Red);
+
+  &:not(:disabled):hover {
+    background: darken(#ff014e, 20%);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    border: 1px solid darken(#ff014e, 20%);
+  }
+}
+.chevron {
+  &[data-rotate] {
+    transform: rotate(180deg);
+  }
+}
+.content {
+  padding: 36px 16px !important;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrowContainer {
+  padding: 6px 7px;
+  border: 2px solid darken(#ff014e, 20%);
+  border-radius: 50%;
+}
+
+.provablyFair {
+  padding: 0px !important;
+  &HeaderText {
+    color: var(--Starlight-100, #fff);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  &ContentText {
+    color: var(--Starlight-50, rgba(255, 255, 255, 0.5));
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &Item {
+    & > button {
+      background: #1a1e24;
+      border: 1px solid var(--Starlight-10, rgba(255, 255, 255, 0.1));
+
+      &[aria-expanded='false'] {
+        border-radius: 8px;
+      }
+
+      &[aria-expanded='true'] {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+    }
+
+    & > button:hover {
+      background: transparent;
+    }
+  }
+  &Header {
+    padding: 12px 25px;
+    min-width: 555px;
+    @media (max-width: 700px) {
+      min-width: 100%;
+    }
+  }
+  &Content {
+    & input {
+      padding-right: 50px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    border-radius: 0px 0px 8px 8px;
+    border: 1px solid var(--Starlight-10, rgba(255, 255, 255, 0.1));
+    background: var(--starlight-25, rgba(255, 255, 255, 0.03));
+  }
+}
+
+.copyIcon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #ff014e;
+
+  top: calc(50% + 2px);
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.verifyText {
+  padding: 10px;
+  color: var(--Starlight-75, rgba(255, 255, 255, 0.75));
+  font-feature-settings:
+    'liga' off,
+    'clig' off;
+  font-family: Outfit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rotateBtn {
+  border-radius: 4px;
+  border: 1px solid #131620;
+  background: #0e1113;
+  box-shadow: 0px 0px 0px 1px #1d2234;
+  display: flex;
+  padding: 6px 0px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  cursor: pointer;
+  width: 100%;
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.moreInfo {
+  color: var(--Jackpot-Red, #ff014e);
+  font-family: Outfit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration-line: underline;
+  cursor: pointer;
+  &:active {
+    transform: scale(0.95);
+  }
+}
